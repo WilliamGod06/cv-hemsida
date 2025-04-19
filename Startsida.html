@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Startsida</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="namn">
+<h1>William Andersson</h1>
+</div>
+<div class="beskrivning">
+<p class="ommig">Jag heter William Andersson och<br> är 19år. Just nu går jag sista året<br> på teknikprogrammet på Polhemsskolan. </p>
+</div>
+
+<p class="titel1">Arbetslivserfarenheter</p>
+<p class="arbetsplats1">Produktion, McDonald's</p>
+<p class="datum1">Nov 2024 - Nuvarande</p>
+<p class="arbetsuppgift1">Arbetet på Mcdonald's har ett varierat tempo. Just därför är samarbete en viktig faktor inom arbetet. Den gyllene regeln på McDonald's är att inte ta risker, utan att istället tänka på säkerheten i första hand</p>
+
+<p class="arbetsplats2">Parkarbetare, Gävle Kommun</p>
+<p class="datum2">Jul 2024 - Jul 2024</p>
+<p class="arbetsuppgift2">Arbetet bestod av praktiska uppgifter såsom att rensa ogräs, tömma sopor, fnasning och vattning. Jag arbetade dels självständigt, men även med kollegor. Arbetstempot var högt vilket ledde till en effektiv arbetsinsats.</p>
+
+<p class="arbetsplats3">Servitör (prao), Brända Bocken</p>
+<p class="datum3">Maj 2022 - Jun 2022</p>
+<p class="arbetsuppgift3">Arbetet som servitör krävde ett högt tempo. Samarbetet var väldigt viktigt och jag lärde mig snabbt hur jag skulle hantera stressiga situationer, med hjälp av mina kollegor.</p>
+
+<p class="titel2">Utbildning</p>
+<p class="utbildning1">Grundskolan, Fridhemsskolan, Vallbacksskolan</p>
+<p class="datum4">Aug 2013 - Jun 2022</p>
+
+<p class="utbildning2">Teknikprogrammet, Polhemsskolan</p>
+<p class="datum5">Aug 2022 - Jun 2025</p>
+<p class="kompetens">Kompetenser</p>
+<div class="nav-buttons">
+    <button onclick="scrollToSection('experience')">Erfarenhet</button>
+    <button onclick="scrollToSection('education')">Utbildning</button>
+    <button onclick="scrollToSection('skills')">Kompetenser</button>
+    <button onclick="scrollToSection('hobbies')">Hobbies</button>
+    <button onclick="scrollToSection('contact')">Kontakt</button>
+</div>
+<div class="kompetens-wrapper">
+    <div class="kompetens-sektion">
+
+            
+    
+
+        <p class="datorvana">Datorvana</p>
+        <div class="container">
+            <div class="kompetens datorvana">90%</div>
+        </div>
+
+        <p class="microsoftoffice">Microsoft Office</p>
+        <div class="container">
+            <div class="kompetens microsoftoffice">80%</div>
+        </div>
+
+        <p class="snabblärd">Snabblärd</p>
+        <div class="container">
+            <div class="kompetens snabblärd">70%</div>
+        </div>
+
+        <p class="lagspelare">Lagspelare</p>
+        <div class="container">
+            <div class="kompetens lagspelare">80%</div>
+        </div>
+    </div>
+</div>
+<p class="titel3">Hobbies</p>
+<p class="beskrivning2">Jag tycker om att gymma, umgås med kompisar, spela dataspel och programmera</p>
+
+<p class="kontakttitel">Kontaktuppgifter</p>
+
+<p class="adress">Adress</p>
+<p class="adressbes">Hästmursvärgen 14<br>80591, Gävle<br>Sweden</p>
+
+<p class="telefon">Telefon</p>
+<p class="nummer">070-646 46 59</p>
+
+<p class="e-post">E-Post</p>
+<p class="e-postadress">willand06@icloud.com</p>
+
+<p class="datum6">Datum/Födelseort</p>
+<p class="datumbes">2006-04-05<br>Gävle</p>
+
+<p class="körkort">Körkort</p>
+<p class="körkortbes">B-körkort</p>
+
+<p class="titel1 scroll-section" id="experience">Arbetslivserfarenheter</p>
+<p class="titel2 scroll-section" id="education">Utbildning</p>
+<p class="kompetens scroll-section" id="skills">Kompetenser</p>
+<p class="titel3 scroll-section" id="hobbies">Hobbies</p>
+<p class="kontakttitel scroll-section" id="contact">Kontaktuppgifter</p>
+
+
+<div class="cursor-light"></div>
+
+<script>
+    const lightCursor = document.querySelector('.cursor-light');
+
+    document.addEventListener('mousemove', (e) => {
+        lightCursor.style.left = e.clientX + 'px';
+        lightCursor.style.top = e.clientY + 'px';
+    });
+
+    document.addEventListener('mousedown', () => {
+        lightCursor.classList.add('active');
+    });
+
+    document.addEventListener('mouseup', () => {
+        setTimeout(() => {
+            lightCursor.classList.remove('active');
+        }, 300); // Match the CSS transition duration
+    });
+</script>
+<script>
+    function scrollToSection(id) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+</body>
+
+
+</html>
